@@ -49,9 +49,19 @@ public class Gaulois {
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
 		trophees = romain.recevoirCoup((force / 3) * effetPotion);
-		for (int i = 0; trophees != null && i < trophees.length; i++,
-			nbTrophees++) {
+		for (int i = 0; trophees != null && i < trophees.length; i++, nbTrophees++) {
 			this.trophees[nbTrophees] = trophees[i];
+		}
+	}
+	
+	public void faireUneDonnation(Musee musee) {
+		if (nbTrophees != 0) {
+			String txt = "";
+			for (int i = 0; i < nbTrophees; i++) {
+				musee.donnerTrophees(this ,trophees[i]);
+				txt += "- " + trophees[i];
+			}
+			parler(txt);
 		}
 	}
 

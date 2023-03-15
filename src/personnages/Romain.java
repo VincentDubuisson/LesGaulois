@@ -17,7 +17,7 @@ public class Romain {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 	
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le romain " + nom + " : ";
 	}
 	
@@ -28,5 +28,13 @@ public class Romain {
 		} else {
 			parler("J'abandonne...");
 		}
+	}
+	
+	public static void main(String[] args) {
+		Romain minus;
+		minus = new Romain("Minus", 5);
+		minus.prendreParole();
+		minus.parler("Salut");
+		minus.recevoirCoup(8);
 	}
 }

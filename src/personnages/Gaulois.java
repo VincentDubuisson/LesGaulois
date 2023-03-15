@@ -18,7 +18,7 @@ public class Gaulois {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 	
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
 	
@@ -35,7 +35,12 @@ public class Gaulois {
 	public static void main(String[] args) {
 		Gaulois asterix;
 		asterix = new Gaulois("Astérix", 8);
+		Romain minus;
+		minus = new Romain("Minus", 5);
 		System.out.println(asterix.getNom());
 		System.out.println(asterix);
+		asterix.prendreParole();
+		asterix.parler("Salut");
+		asterix.frapper(minus);
 	}
 }

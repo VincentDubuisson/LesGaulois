@@ -32,7 +32,7 @@ public class Gaulois {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
 	
-	private void boirePotion(int forcePotion) {
+	public void boirePotion(int forcePotion) {
 		effetPotion = forcePotion;
 		parler("Merci Druide, je sens que ma force est " + effetPotion + " fois décuplée.");
 		

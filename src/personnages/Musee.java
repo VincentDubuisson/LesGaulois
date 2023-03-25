@@ -8,4 +8,8 @@ public class Musee {
 		trophee[nbTrophee] = equipement;
 		nbTrophee ++;
 	}
+	
+	public String extraireInsctructionsCaml() {
+		
+	}
 }
